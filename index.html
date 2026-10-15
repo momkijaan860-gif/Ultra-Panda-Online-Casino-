@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#1246b5">
+<title>Ultra Panda Online Casino</title>
+<style>
+:root{--blue:#1748bd;--deep:#082566;--ink:#17233f;--muted:#6c7890;--bg:#f3f6fc;--line:#dfe6f1}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);font-family:Arial,Helvetica,sans-serif;color:var(--ink);padding-bottom:78px}
+header{position:sticky;top:0;z-index:5;background:#1243ad;color:#fff;padding:17px 20px;display:flex;align-items:center;justify-content:space-between;gap:12px;box-shadow:0 3px 14px #102c6b20}
+.brand{font-size:clamp(18px,4vw,25px);font-weight:800;letter-spacing:-.4px}.brand span{color:#9fc6ff}
+.live{font-size:13px;font-weight:700;white-space:nowrap}.dot{display:inline-block;width:10px;height:10px;background:#22c875;border-radius:50%;margin-right:6px;box-shadow:0 0 0 4px #ffffff20}
+main{max-width:1000px;margin:auto;padding:20px 16px}
+.hero{border-radius:26px;padding:28px 24px;min-height:205px;color:#fff;background:radial-gradient(circle at 85% 25%,#ffffff26 0 14%,transparent 14.5%),radial-gradient(circle at 65% 110%,#ffffff18 0 35%,transparent 35.5%),linear-gradient(120deg,#087d9a,#2cbfd1);box-shadow:0 12px 26px #0a5b8020;display:flex;flex-direction:column;justify-content:center}
+.hero h1{font-size:clamp(28px,6vw,42px);line-height:1.08;margin:0 0 10px;letter-spacing:-1px}.hero p{font-size:16px;margin:0 0 20px;color:#effcff}
+.btn{display:inline-block;border:0;border-radius:999px;background:var(--blue);color:#fff;text-decoration:none;padding:13px 20px;font-size:15px;font-weight:700;text-align:center;cursor:pointer}
+.hero .btn{align-self:flex-start;background:#ffffff25;border:1px solid #ffffff90}
+.pills{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:18px 0 28px}
+.pill{background:#fff;border:1px solid var(--line);border-radius:17px;padding:14px 8px;text-align:center;font-size:13px;font-weight:700;color:#2453ad}
+h2{font-size:23px;margin:26px 0 15px;letter-spacing:-.4px}
+.section-head{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.badge{background:#e0e9ff;color:#2858bd;padding:8px 13px;border-radius:30px;font-weight:700;font-size:13px;white-space:nowrap}
+.popular{display:flex;gap:15px;overflow-x:auto;padding:2px 0 12px;scrollbar-width:thin}
+.popular-item{min-width:105px;text-align:center;font-size:13px;font-weight:700;color:#6b7690}
+.game-icon{width:86px;height:86px;border-radius:22px;margin:0 auto 8px;display:grid;place-items:center;font-size:34px;color:#fff;font-weight:900;background:linear-gradient(145deg,#6c26d9,#f09c35);box-shadow:0 5px 12px #16264a24;border:2px solid #fff}
+.search{width:100%;border:2px solid #c4d2f7;border-radius:20px;background:#fff;padding:17px 18px;font-size:16px;outline:none;margin:9px 0 14px}
+.search:focus{border-color:#4774e0}
+.game-list{display:grid;gap:12px}
+.game{display:grid;grid-template-columns:28px 68px minmax(0,1fr) auto;align-items:center;gap:12px;padding:13px 14px;border:1px solid var(--line);background:#fff;border-radius:22px;min-width:0}
+.num{text-align:center;color:#67738b;font-weight:700}
+.game .game-icon{width:64px;height:64px;border-radius:17px;font-size:26px;margin:0}
+.game-name{font-size:17px;font-weight:800;overflow-wrap:anywhere}.status{font-size:13px;color:#758097;margin-top:5px}.status:before{content:"";display:inline-block;width:9px;height:9px;border-radius:50%;background:#22a76b;margin-right:7px}
+.game .btn{padding:12px 16px;font-size:13px}
+.support{margin-top:30px;background:linear-gradient(145deg,#103783,#091d5a);border-radius:25px;padding:25px 22px;color:#fff}
+.support h2{margin-top:0}.support p{color:#d8e3ff;line-height:1.6}
+.contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:18px}
+.contact{display:block;text-align:center;text-decoration:none;color:#fff;background:#ffffff12;border:1px solid #ffffff25;border-radius:16px;padding:16px 8px;font-weight:700;overflow-wrap:anywhere}
+.contact .symbol{display:block;font-size:25px;margin-bottom:8px}.email{grid-column:1/-1}
+footer{max-width:1000px;margin:0 auto;padding:20px 16px 26px;color:#7a869d;font-size:13px;line-height:1.6}
+.bottom{position:fixed;bottom:0;left:0;right:0;z-index:8;background:#fff;border-top:1px solid var(--line);display:grid;grid-template-columns:repeat(3,1fr);padding:9px 5px calc(9px + env(safe-area-inset-bottom));box-shadow:0 -3px 15px #10234b0c}
+.bottom a{text-decoration:none;text-align:center;font-size:12px;font-weight:700;color:#2873c8}.bottom span{display:block;font-size:23px;margin-bottom:3px}
+.empty{display:none;text-align:center;color:var(--muted);padding:25px;background:#fff;border-radius:16px}
+@media(min-width:700px){main{padding:26px 24px}.hero{padding:38px 42px}.game-list{grid-template-columns:repeat(2,minmax(0,1fr))}.game{grid-template-columns:22px 58px minmax(0,1fr)}.game .btn{grid-column:2/4;width:100%;margin-top:5px}.contact-grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:390px){header{padding:15px 12px}.live{font-size:11px}.game{grid-template-columns:20px 54px minmax(0,1fr);gap:9px;padding:12px 10px}.game .game-icon{width:52px;height:52px;font-size:22px}.game-name{font-size:15px}.game .btn{grid-column:2/4;width:100%;margin-top:3px}.pills{gap:6px}.pill{font-size:11px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="brand">Ultra Panda <span>Online Casino</span></div>
+  <div class="live"><span class="dot"></span>Support online</div>
+</header>
+<main>
+  <section class="hero">
+    <h1>Welcome to<br>Ultra Panda</h1>
+    <p>Explore the game collection and contact our support team for help.</p>
+    <a class="btn" href="#games">Explore Games ↓</a>
+  </section>
+  <div class="pills" aria-label="Site features">
+    <div class="pill">🎮 Game Collection</div>
+    <div class="pill">💬 Friendly Support</div>
+    <div class="pill">📱 Mobile Friendly</div>
+  </div>
+  <section id="games">
+    <div class="section-head"><h2>Popular Games</h2><span class="badge">30 listed</span></div>
+    <div class="popular" id="popular"></div>
+    <input id="search" class="search" type="search" placeholder="⌕  Search games" aria-label="Search games">
+    <div class="game-list" id="gameList"></div>
+    <div class="empty" id="empty">No games found. Try another name.</div>
+  </section>
+  <section class="support" id="support">
+    <h2>Customer Support</h2>
+    <p>Need help? Contact us through one of the channels below. Please confirm details directly with support before sharing personal or payment information.</p>
+    <div class="contact-grid">
+      <a class="contact" href="https://wa.me/923217487671" target="_blank" rel="noopener"><span class="symbol">☏</span>WhatsApp</a>
+      <a class="contact" href="https://www.facebook.com/profile.php?id=61594038230516" target="_blank" rel="noopener"><span class="symbol">f</span>Facebook</a>
+      <a class="contact email" href="mailto:tombradywalker@gmail.com"><span class="symbol">✉</span>tombradywalker@gmail.com</a>
+    </div>
+  </section>
+</main>
+<footer>© 2026 Ultra Panda Online Casino. All rights reserved.<br>Game availability and access details should be confirmed with the support team.</footer>
+<nav class="bottom" aria-label="Quick contact">
+  <a href="https://wa.me/923217487671" target="_blank" rel="noopener"><span>☏</span>WhatsApp</a>
+  <a href="https://www.facebook.com/profile.php?id=61594038230516" target="_blank" rel="noopener"><span>f</span>Facebook</a>
+  <a href="mailto:tombradywalker@gmail.com"><span>✉</span>Email</a>
+</nav>
+<script>
+const games = [
+ ["Orion Stars","🌌"],["Milky Way","🌠"],["Game Vault","🎮"],["Juwa","👑"],["Sollo777","🎰"],
+ ["Juwa 2.0","✨"],["Ultra Panda","🐼"],["Vblink","🎲"],["Panda Master","🐼"],["Fire Kirin","🔥"],
+ ["River Sweeps","🌊"],["Game Room","🕹️"],["Cash Machine","💠"],["Mafia 777","🃏"],["Lucky Star","⭐"],
+ ["Ding Dong","🔔"],["YOLO 777","🎯"],["Mega Spin","🌀"],["Miga","🎡"],["E-Game","🎮"],
+ ["Moolah","🍀"],["Vegas Sweep","🌃"],["Golden Dragon","🐉"],["Lucky 7","7️⃣"],["Panda Fortune","🐼"],
+ ["Royal Reels","👑"],["Star Play","🌟"],["Spin City","🎡"],["Treasure Quest","💎"],["Magic Wheel","🪄"]
+];
+const list = document.getElementById('gameList');
+const search = document.getElementById('search');
+const empty = document.getElementById('empty');
+function render(filter=''){
+ const matches = games.filter(([name])=>name.toLowerCase().includes(filter.toLowerCase()));
+ list.innerHTML = matches.map(([name,icon],i)=>`<article class="game"><div class="num">${games.indexOf(games.find(g=>g[0]===name))+1}</div><div class="game-icon" aria-hidden="true">${icon}</div><div><div class="game-name">${name}</div><div class="status">Ask support for details</div></div><a class="btn" href="#support">Get info</a></article>`).join('');
+ empty.style.display = matches.length ? 'none' : 'block';
+}
+document.getElementById('popular').innerHTML = games.slice(0,8).map(([name,icon])=>`<div class="popular-item"><div class="game-icon">${icon}</div>${name}</div>`).join('');
+search.addEventListener('input',()=>render(search.value));
+render();
+</script>
+</body>
+</html>
